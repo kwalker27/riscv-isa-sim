@@ -28,6 +28,9 @@ static void help(int exit_code = 1)
   fprintf(stderr, "  -d                    Interactive debug mode\n");
   fprintf(stderr, "  -g                    Track histogram of PCs\n");
   fprintf(stderr, "  -l                    Generate a log of execution\n");
+#ifdef RISCV_ENABLE_COMMITLOG
+  fprintf(stderr, "  --log-commits         Generate a log of commited state updates\n");
+#endif
 #ifdef HAVE_BOOST_ASIO
   fprintf(stderr, "  -s                    Command I/O via socket (use with -d)\n");
 #endif
