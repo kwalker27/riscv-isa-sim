@@ -235,7 +235,7 @@ public:
   void set_histogram(bool value);
 #ifdef RISCV_ENABLE_COMMITLOG
   void enable_log_commits();
-  bool get_log_commits_enabled() const { return log_commits_enabled; }
+  bool get_log_commits_enabled() const { return log_commits_enabled && debug; }
 #endif
   void reset();
   void step(size_t n); // run for n cycles
